@@ -1,0 +1,95 @@
+# --- Node ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Next.js ---
+.next/
+out/
+dist/
+.next-static/
+.next/cache/
+.next/server/
+.vercel/
+
+# --- Build ---
+build/
+*.log
+*.tsbuildinfo
+
+# --- Env ---
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*.local
+
+# --- TypeScript ---
+*.tsbuildinfo
+
+# --- OS Files ---
+.DS_Store
+Thumbs.db
+
+# --- IDEs ---
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# --- Logs ---
+logs/
+*.log
+log/
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# --- Coverage ---
+coverage/
+*.lcov
+
+# --- Temp ---
+tmp/
+temp/
+*.tmp
+
+# --- Storybook ---
+storybook-static/
+
+# --- Docker ---
+docker-data/
+docker-compose.override.yml
+
+# --- Turbo Repo ---
+.turbo/
+turbo/
+turbo-build/
+
+# --- SWC ---
+.swc/
+
+# --- Prisma ---
+prisma/*.db
+prisma/*.sqlite
+prisma/migrations/*-draft/
+
+# --- Uploads / static files ---
+public/uploads/
+public/temp/
+public/storage/
+
+# --- Cache ---
+.cache/
+.cache-loader/
+
+# --- Misc ---
+*.swp
+*.swo
+*.bak
