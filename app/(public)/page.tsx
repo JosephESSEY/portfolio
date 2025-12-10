@@ -1,5 +1,4 @@
 import { BentoGrid } from "@/components/bento/bento-grid"
-import { HeroCard } from "@/components/bento/hero-card"
 import { ProjectCard } from "@/components/bento/project-card"
 import { SocialCard } from "@/components/bento/social-card"
 import { SkillsCard } from "@/components/bento/skills-card"
@@ -35,20 +34,48 @@ export default async function HomePage() {
   const stats = (statsBlock?.metadata?.stats as { label: string; value: string }[]) || []
 
   return (
-    <div className="mx-auto max-w-7xl px-4 md:px-6">
+    <div className="w-full">
       <BentoGrid>
-        {/* Hero */}
-        <HeroCard profile={profile} />
+        {/* Social Links */}
+        {socialLinks.slice(0, 6).map((link) => (
+          <SocialCard key={link.id} link={link} />
+        ))}
 
         {/* Featured Projects */}
         {projects.slice(0, 2).map((project, index) => (
           <ProjectCard key={project.id} project={project} size={index === 0 ? "medium" : "medium"} />
         ))}
 
-        {/* Social Links */}
-        {socialLinks.slice(0, 3).map((link) => (
-          <SocialCard key={link.id} link={link} />
+        {/* About */}
+        <AboutCard bio={profile.bio} />
+
+        {/* Stats */}
+        {stats.length > 0 && <StatsCard stats={stats} />}
+
+        {/* Skills */}
+        {Object.entries(skillsByCategory)
+          .slice(0, 2)
+          .map(([category, skills]) => (
+            <SkillsCard key={category} category={category} skills={skills} />
+          ))}
+
+        {/* Timeline */}
+        <TimelineCard items={timeline} />
+
+        {/* Quote */}
+        {quoteBlock && <QuoteCard quote={quoteBlock.content} />}
+
+        {/* Blog Posts */}
+        {blogPosts.slice(0, 2).map((post) => (
+          <BlogCard key={post.id} post={post} size="medium" />
         ))}
+
+        {/* Contact CTA */}
+        <ContactCard email={profile.email} available={profile.available} />
+      </BentoGrid>
+    </div>
+  )
+}
 
         {/* About */}
         <AboutCard bio={profile.bio} />
