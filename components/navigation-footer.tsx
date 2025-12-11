@@ -3,24 +3,27 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion } from "framer-motion"
-import { HomeIcon, UserIcon, BriefcaseIcon, ServerIcon, MailIcon, NewspaperIcon } from "@/components/icons"
-
-const navItems = [
-  { href: "/", label: "Accueil", icon: HomeIcon },
-  { href: "/about", label: "À propos", icon: UserIcon },
-  { href: "/projects", label: "Projets", icon: BriefcaseIcon },
-  { href: "/services", label: "Services", icon: ServerIcon },
-  { href: "/blog", label: "Blog", icon: NewspaperIcon },
-  { href: "/contact", label: "Contact", icon: MailIcon },
-]
+import { HomeIcon, UserIcon, BriefcaseIcon, ServerIcon, MailIcon, NewspaperIcon, CalendarIcon } from "@/components/icons"
+import { useTranslation } from "@/hooks/use-translation"
 
 export function NavigationFooter() {
   const pathname = usePathname()
+  const { t } = useTranslation()
+
+  const navItems = [
+    { href: "/", label: t.nav.home, icon: HomeIcon },
+    { href: "/about", label: t.nav.about, icon: UserIcon },
+    { href: "/projects", label: t.nav.projects, icon: BriefcaseIcon },
+    { href: "/events", label: t.nav.events, icon: CalendarIcon },
+    { href: "/services", label: t.nav.services, icon: ServerIcon },
+    { href: "/blog", label: t.nav.blog, icon: NewspaperIcon },
+    { href: "/contact", label: t.nav.contact, icon: MailIcon },
+  ]
 
   return (
-    <footer className="fixed bottom-0 left-0 right-0 w-full bg-background/95 backdrop-blur-lg border-t border-border/40 z-50 shadow-lg">
-      <nav className="max-w-7xl mx-auto px-4 py-3">
-        <ul className="flex items-center justify-center gap-2 lg:gap-4 flex-wrap">
+    <footer className="fixed bottom-0 left-0 right-0 lg:left-80 xl:left-96 bg-background/95 backdrop-blur-lg border-t border-border/40 z-50 shadow-lg overflow-x-auto scrollbar-hide">
+      <nav className="w-full px-2 py-3 lg:px-4">
+        <ul className="flex items-center justify-center gap-1 lg:gap-2 xl:gap-3 min-w-max">
           {navItems.map((item, index) => {
             const isActive = pathname === item.href
             const Icon = item.icon
@@ -35,8 +38,8 @@ export function NavigationFooter() {
                 <Link
                   href={item.href}
                   className={`
-                    flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm
-                    transition-all duration-200
+                    flex items-center gap-1.5 px-2 py-2 lg:px-3 xl:px-4 rounded-lg font-medium text-xs lg:text-sm
+                    transition-all duration-200 whitespace-nowrap
                     ${
                       isActive
                         ? "bg-primary text-primary-foreground shadow-lg scale-105"
@@ -44,8 +47,8 @@ export function NavigationFooter() {
                     }
                   `}
                 >
-                  <Icon className="w-4 h-4" />
-                  <span className="hidden sm:inline">{item.label}</span>
+                  <Icon className="w-4 h-4 shrink-0" />
+                  <span className="hidden sm:inline truncate">{item.label}</span>
                 </Link>
               </motion.li>
             )

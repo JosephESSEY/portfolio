@@ -10,19 +10,19 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Alexandre Dupont | Full-Stack Developer & Designer",
+  title: "Joseph ESSEY | Full-Stack Developer & Event Planner",
   description:
     "Portfolio personnel - Développeur Full-Stack et Designer créant des expériences numériques élégantes et performantes.",
   keywords: ["développeur", "full-stack", "designer", "portfolio", "react", "next.js"],
-  authors: [{ name: "Alexandre Dupont" }],
-  creator: "Alexandre Dupont",
+  authors: [{ name: "Joseph ESSEY" }],
+  creator: "Joseph ESSEY",
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://alexandre.dev",
-    title: "Alexandre Dupont | Full-Stack Developer & Designer",
+    url: "https://josephessey.dev",
+    title: "Joseph ESSEY | Full-Stack Developer & Event Planner",
     description: "Portfolio personnel - Développeur Full-Stack et Designer",
-    siteName: "Alexandre Dupont",
+    siteName: "Joseph ESSEY",
   },
   twitter: {
     card: "summary_large_image",

@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
+import { ThemeToggle } from "@/components/theme-toggle"
+import { LocaleToggle } from "@/components/locale-toggle"
 import type { Profile } from "@/lib/types"
 
 interface ProfileSidebarProps {
@@ -11,6 +13,11 @@ interface ProfileSidebarProps {
 export function ProfileSidebar({ profile }: ProfileSidebarProps) {
   return (
     <div className="flex flex-col items-center justify-start h-full text-center p-6 lg:p-8">
+      {/* Theme & Language toggles */}
+      <div className="w-full flex justify-end gap-2 mb-4">
+        <ThemeToggle />
+        <LocaleToggle />
+      </div>
       {/* Avatar avec effet glass */}
       <motion.div
         className="relative mb-6"

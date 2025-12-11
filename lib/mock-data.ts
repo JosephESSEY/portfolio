@@ -16,13 +16,13 @@ import type {
 
 export const mockProfile: Profile = {
   id: "1",
-  name: "Alexandre Dupont",
-  role: "Full-Stack Developer & Designer",
-  tagline: "Je crée des expériences numériques élégantes et performantes",
-  bio: `Passionné par le développement web depuis plus de 8 ans, je combine expertise technique et sensibilité design pour créer des produits digitaux qui marquent les esprits.
+  name: "Joseph ESSEY",
+  role: "Full-Stack Developer & Event Planner",
+  tagline: "Je crée des expériences digitales innovantes et des événements mémorables",
+  bio: `Professionnel aux multiples talents, je combine deux passions : le développement web et l'organisation d'événements. Avec +8 ans d'expérience en développement, je crée des solutions digitales performantes et élégantes. En tant qu'Event Planner, je conçois et orchestre des événements uniques qui marquent les esprits.
 
-Mon approche est centrée sur l'utilisateur, avec une attention particulière aux détails et à la performance. Je travaille avec les technologies modernes pour livrer des solutions robustes et évolutives.`,
-  avatarUrl: "/professional-developer-portrait-minimal.jpg",
+Ma double expertise me permet d'apporter une vision 360° à vos projets : des plateformes web sur-mesure pour vos événements, des expériences digitales immersives, et une approche unique alliant technologie et créativité événementielle.`,
+  avatarUrl: "/joseph.jpg",
   email: "hello@alexandre.dev",
   location: "Paris, France",
   available: true,

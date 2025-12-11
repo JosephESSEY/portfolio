@@ -34,7 +34,7 @@ export default async function PublicLayout({
 
       {/* Contenu principal - Scrollable */}
       <main className="flex-1 overflow-y-auto w-full">
-        <div className="min-h-screen p-6 lg:p-12 pb-24">
+        <div className="min-h-screen p-6 lg:p-12 pb-32">
           {children}
         </div>
       </main>
