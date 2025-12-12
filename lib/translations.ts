@@ -49,6 +49,8 @@ export const translations = {
       services: "Services",
       blog: "Blog",
       contact: "Contact",
+      awards: "Awards",
+      certifications: "Certifications",
     },
     // Profil Sidebar
     profile: {
@@ -112,6 +114,8 @@ export const translations = {
       services: "Services",
       blog: "Blog",
       contact: "Contact",
+      awards: "Awards",
+      certifications: "Certifications",
     },
     // Profile Sidebar
     profile: {
