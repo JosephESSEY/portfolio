@@ -111,7 +111,7 @@ export default function AwardsPage() {
     <div className="w-full max-w-6xl mx-auto space-y-12 pb-24 lg:pb-32">
       {/* Header */}
       <div className="space-y-4">
-        <h1 className="text-4xl lg:text-5xl font-bold bg-linear-to-r from-foreground via-primary to-purple-500 bg-clip-text text-transparent">
+        <h1 className="text-4xl lg:text-5xl font-bold bg-linear-to-r from-foreground via-primary to-purple-700 bg-clip-text text-transparent">
           {locale === "fr" ? "Awards & Certifications" : "Awards & Certifications"}
         </h1>
         <p className="text-xl text-muted-foreground">
@@ -240,11 +240,11 @@ export default function AwardsPage() {
           {allCertifications.slice(0, 3).map((cert: any) => (
             <div
               key={cert.id}
-              className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 hover:border-emerald-500 hover:shadow-lg hover:shadow-emerald-500/10 transition-all group"
+              className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 hover:border-purple-700 transition-all group"
             >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-emerald-500 transition-colors">
-                  <svg className="w-6 h-6 text-emerald-500 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-purple-700/10 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-purple-700 transition-colors">
+                  <svg className="w-6 h-6 text-purple-700 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>

@@ -37,17 +37,17 @@ export default function ProjectsPage() {
     : projects.filter(p => p.category === selectedCategory)
 
   const stats = [
-    { number: "100+", label: locale === "fr" ? "Projets réalisés" : "Completed Projects", color: "text-purple-500" },
+    { number: "100+", label: locale === "fr" ? "Projets réalisés" : "Completed Projects", color: "text-purple-700" },
     { number: "50+", label: locale === "fr" ? "Clients satisfaits" : "Happy Clients", color: "text-primary" },
-    { number: "8", label: locale === "fr" ? "Années d'expérience" : "Years of Experience", color: "text-emerald-500" },
-    { number: "98%", label: locale === "fr" ? "Taux de satisfaction" : "Satisfaction Rate", color: "text-orange-500" }
+    { number: "8", label: locale === "fr" ? "Années d'expérience" : "Years of Experience", color: "text-purple-700" },
+    { number: "98%", label: locale === "fr" ? "Taux de satisfaction" : "Satisfaction Rate", color: "text-foreground" }
   ]
 
   return (
     <div className="w-full max-w-6xl mx-auto space-y-8">
       {/* Header */}
       <div className="space-y-4">
-        <h1 className="text-4xl lg:text-5xl font-bold bg-linear-to-r from-foreground via-primary to-purple-500 bg-clip-text text-transparent">
+        <h1 className="text-4xl lg:text-5xl font-bold bg-linear-to-r from-foreground via-primary to-purple-700 bg-clip-text text-transparent">
           {locale === "fr" ? "Mes Projets" : "My Projects"}
         </h1>
         <p className="text-lg text-muted-foreground max-w-3xl">
@@ -63,7 +63,7 @@ export default function ProjectsPage() {
         {stats.map((stat, idx) => (
           <div
             key={idx}
-            className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 text-center hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/10 transition-all"
+            className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 text-center hover:border-purple-700 hover:shadow-lg hover:shadow-purple-700/10 transition-all"
           >
             <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.number}</div>
             <div className="text-sm text-muted-foreground">{stat.label}</div>
@@ -79,8 +79,8 @@ export default function ProjectsPage() {
             onClick={() => setSelectedCategory(cat.id)}
             className={`px-4 py-2 rounded-lg font-medium transition-all ${
               selectedCategory === cat.id
-                ? "bg-purple-500 text-white shadow-lg shadow-purple-500/20"
-                : "bg-card/80 text-muted-foreground border-2 border-border hover:border-purple-500"
+                ? "bg-purple-700 text-white shadow-lg shadow-purple-700/20"
+                : "bg-card/80 text-muted-foreground border-2 border-border hover:border-purple-700"
             }`}
           >
             {cat.label}
@@ -93,7 +93,7 @@ export default function ProjectsPage() {
         {filteredProjects.map((project, idx) => (
           <div
             key={project.id}
-            className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl overflow-hidden hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/10 transition-all group"
+            className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl overflow-hidden hover:border-purple-700 hover:shadow-lg hover:shadow-purple-700/10 transition-all group"
           >
             {/* Image */}
             <div className="relative h-64 w-full overflow-hidden">
@@ -108,7 +108,7 @@ export default function ProjectsPage() {
               {/* Badges overlay */}
               <div className="absolute top-4 left-4 flex gap-2">
                 {project.featured && (
-                  <span className="px-3 py-1 text-xs font-medium bg-purple-500/90 text-white rounded-full backdrop-blur-sm border border-purple-400/50">
+                  <span className="px-3 py-1 text-xs font-medium bg-purple-700/90 text-white rounded-full backdrop-blur-sm border border-purple-400/50">
                     {locale === "fr" ? "★ En vedette" : "★ Featured"}
                   </span>
                 )}
@@ -134,7 +134,7 @@ export default function ProjectsPage() {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 rounded-lg bg-purple-500/90 backdrop-blur-sm hover:bg-purple-500 text-white transition-colors"
+                    className="p-2 rounded-lg bg-purple-700/90 backdrop-blur-sm hover:bg-purple-700 text-white transition-colors"
                   >
                     <ExternalLinkIcon className="w-5 h-5" />
                   </a>
@@ -146,7 +146,7 @@ export default function ProjectsPage() {
             <div className="p-6 space-y-4">
               <div className="space-y-2">
                 <div className="flex items-start justify-between gap-2">
-                  <h2 className="text-2xl font-bold text-foreground group-hover:text-purple-500 transition-colors">
+                  <h2 className="text-2xl font-bold text-foreground group-hover:text-purple-700 transition-colors">
                     {project.title}
                   </h2>
                   {project.client && (
@@ -176,7 +176,7 @@ export default function ProjectsPage() {
               {project.impact && (
                 <div className="pt-3 border-t border-border/50">
                   <div className="flex items-start gap-2">
-                    <TrophyIcon className="w-5 h-5 text-purple-500 shrink-0 mt-0.5" />
+                    <TrophyIcon className="w-5 h-5 text-purple-700 shrink-0 mt-0.5" />
                     <p className="text-sm text-muted-foreground">
                       <span className="font-medium text-foreground">{locale === "fr" ? "Impact : " : "Impact: "}</span>
                       {project.impact}
@@ -200,8 +200,8 @@ export default function ProjectsPage() {
       )}
 
       {/* CTA */}
-      <div className="bg-card/80 backdrop-blur-sm border-2 border-purple-500/20 rounded-xl p-8 text-center space-y-4">
-        <SparklesIcon className="w-12 h-12 text-purple-500 mx-auto" />
+      <div className="bg-card/80 backdrop-blur-sm border-2 border-purple-700/20 rounded-xl p-8 text-center space-y-4">
+        <SparklesIcon className="w-12 h-12 text-purple-700 mx-auto" />
         <h2 className="text-2xl font-bold text-foreground">
           {locale === "fr" 
             ? "Un projet en tête ?" 
@@ -215,13 +215,13 @@ export default function ProjectsPage() {
         <div className="flex flex-wrap gap-3 justify-center">
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-purple-500 text-white rounded-lg font-medium hover:bg-purple-600 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-purple-700 text-white rounded-lg font-medium hover:bg-purple-600 transition-colors"
           >
             {locale === "fr" ? "Discutons de votre projet" : "Let's Discuss Your Project"}
           </a>
           <a
             href="/services"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-card/80 text-foreground border-2 border-border rounded-lg font-medium hover:border-purple-500 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-card/80 text-foreground border-2 border-border rounded-lg font-medium hover:border-purple-700 transition-colors"
           >
             {locale === "fr" ? "Voir mes services" : "View My Services"}
           </a>

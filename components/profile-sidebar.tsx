@@ -41,7 +41,7 @@ export function ProfileSidebar({ profile }: ProfileSidebarProps) {
         {/* Status indicator avec animation */}
         {profile.available && (
           <motion.div
-            className="absolute -bottom-1 -right-1 w-6 h-6 bg-emerald-500 rounded-full border-3 border-background shadow-lg flex items-center justify-center"
+            className="absolute -bottom-1 -right-1 w-6 h-6 bg-purple-700 rounded-full border-3 border-background shadow-lg flex items-center justify-center"
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ duration: 0.5, delay: 0.8, type: "spring", bounce: 0.6 }}

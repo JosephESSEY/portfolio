@@ -17,7 +17,7 @@ export function HeroProfileCard({ profile, delay = 0 }: HeroProfileCardProps) {
       {/* Fond décoratif avec gradient animé */}
 
       <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute -bottom-20 -left-20 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+      <div className="absolute -bottom-20 -left-20 w-32 h-32 bg-purple-700/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
       
       <div className="relative flex flex-col items-center justify-center h-full text-center p-8 lg:p-12">
         {/* Avatar avec effet glass */}
@@ -43,7 +43,7 @@ export function HeroProfileCard({ profile, delay = 0 }: HeroProfileCardProps) {
           {/* Status indicator avec animation */}
           {profile.available && (
             <motion.div
-              className="absolute -bottom-2 -right-2 w-8 h-8 bg-emerald-500 rounded-full border-4 border-background shadow-lg flex items-center justify-center"
+              className="absolute -bottom-2 -right-2 w-8 h-8 bg-purple-700 rounded-full border-4 border-background shadow-lg flex items-center justify-center"
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
               transition={{ duration: 0.5, delay: delay + 0.8, type: "spring", bounce: 0.6 }}
@@ -96,7 +96,7 @@ export function HeroProfileCard({ profile, delay = 0 }: HeroProfileCardProps) {
           transition={{ duration: 0.4, delay: delay + 0.7 }}
         >
           <motion.span 
-            className="w-2 h-2 rounded-full bg-emerald-500 shadow-sm"
+            className="w-2 h-2 rounded-full bg-purple-700 shadow-sm"
             animate={{ scale: [1, 1.3, 1], opacity: [0.7, 1, 0.7] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           />
@@ -105,7 +105,7 @@ export function HeroProfileCard({ profile, delay = 0 }: HeroProfileCardProps) {
 
         {/* Effet de particules décoratif */}
         <div className="absolute top-8 left-8 w-2 h-2 bg-primary/30 rounded-full animate-ping"></div>
-        <div className="absolute top-16 right-12 w-1 h-1 bg-purple-500/40 rounded-full animate-pulse"></div>
+        <div className="absolute top-16 right-12 w-1 h-1 bg-purple-700/40 rounded-full animate-pulse"></div>
         <div className="absolute bottom-12 left-12 w-1.5 h-1.5 bg-primary/20 rounded-full animate-bounce delay-500"></div>
       </div>
     </BentoCard>

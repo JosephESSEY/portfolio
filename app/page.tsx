@@ -20,9 +20,9 @@ export default function HomePage() {
       {/* Sidebar gauche - Fixe et non scrollable (Desktop only) */}
       <aside className="hidden lg:flex lg:flex-col lg:w-80 xl:w-96 bg-background border-r border-border/40 sticky top-0 h-screen overflow-hidden">
         {/* Fond décoratif */}
-        <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-transparent to-purple-500/5"></div>
+        <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-transparent to-purple-700/5"></div>
         <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-20 -left-20 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        <div className="absolute -bottom-20 -left-20 w-32 h-32 bg-purple-700/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
         
         <div className="relative z-10 flex-1 flex items-center justify-center">
           <ProfileSidebar profile={mockProfile} />
@@ -45,7 +45,7 @@ export default function HomePage() {
               <h1 className="text-4xl lg:text-6xl font-bold bg-linear-to-r from-foreground via-foreground to-muted-foreground bg-clip-text text-transparent leading-tight">
                 {t.home.hero.title1}{" "}
                 <span className="text-primary">{t.home.hero.title2}</span> {t.home.hero.title3}{" "}
-                <span className="text-purple-500">{t.home.hero.title4}</span>
+                <span className="text-purple-700">{t.home.hero.title4}</span>
               </h1>
               <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl leading-relaxed">
                 <strong>{t.home.hero.developerLabel}</strong> {t.home.hero.description}
@@ -55,19 +55,19 @@ export default function HomePage() {
             {/* Stats rapides */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all">
-                <div className="text-3xl font-bold text-primary mb-2">8+</div>
+                <div className="text-3xl font-bold text-primary mb-2">4+</div>
                 <div className="text-sm text-muted-foreground">{t.home.stats.dev}</div>
               </div>
-              <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/10 transition-all">
-                <div className="text-3xl font-bold text-purple-500 mb-2">50+</div>
+              <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 hover:border-purple-700 hover:shadow-lg hover:shadow-purple-700/10 transition-all">
+                <div className="text-3xl font-bold text-purple-700 mb-2">10+</div>
                 <div className="text-sm text-muted-foreground">{t.home.stats.events}</div>
               </div>
               <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all">
-                <div className="text-3xl font-bold text-primary mb-2">100+</div>
+                <div className="text-3xl font-bold text-primary mb-2">12+</div>
                 <div className="text-sm text-muted-foreground">{t.home.stats.projects}</div>
               </div>
-              <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 hover:border-emerald-500 hover:shadow-lg hover:shadow-emerald-500/10 transition-all">
-                <div className="text-3xl font-bold text-emerald-500 mb-2">100%</div>
+              <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 hover:border-purple-700 hover:shadow-lg hover:shadow-purple-700/10 transition-all">
+                <div className="text-3xl font-bold text-purple-700 mb-2">100%</div>
                 <div className="text-sm text-muted-foreground">{t.home.stats.satisfaction}</div>
               </div>
             </div>
@@ -105,23 +105,23 @@ export default function HomePage() {
                 {/* EVENT PLANNING */}
                 <div className="space-y-4">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-purple-500/10 rounded-lg flex items-center justify-center">
-                      <svg className="w-6 h-6 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                       </svg>
                     </div>
                     <h3 className="text-xl font-bold text-foreground">{t.home.expertise.eventTitle}</h3>
                   </div>
                   <div className="space-y-3">
-                    <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-lg p-4 hover:border-purple-500 hover:shadow-md hover:bg-card transition-all">
+                    <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-lg p-4 hover:border-purple-700 hover:shadow-md hover:bg-card transition-all">
                       <h4 className="font-semibold text-foreground mb-1">{t.home.expertise.event1Title}</h4>
                       <p className="text-sm text-muted-foreground">{t.home.expertise.event1Desc}</p>
                     </div>
-                    <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-lg p-4 hover:border-purple-500 hover:shadow-md hover:bg-card transition-all">
+                    <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-lg p-4 hover:border-purple-700 hover:shadow-md hover:bg-card transition-all">
                       <h4 className="font-semibold text-foreground mb-1">{t.home.expertise.event2Title}</h4>
                       <p className="text-sm text-muted-foreground">{t.home.expertise.event2Desc}</p>
                     </div>
-                    <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-lg p-4 hover:border-purple-500 hover:shadow-md hover:bg-card transition-all">
+                    <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-lg p-4 hover:border-purple-700 hover:shadow-md hover:bg-card transition-all">
                       <h4 className="font-semibold text-foreground mb-1">{t.home.expertise.event3Title}</h4>
                       <p className="text-sm text-muted-foreground">{t.home.expertise.event3Desc}</p>
                     </div>

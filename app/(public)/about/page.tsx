@@ -130,7 +130,7 @@ export default function AboutPage() {
     {
       category: locale === "fr" ? "Tech Event Planning" : "Tech Event Planning",
       icon: SparklesIcon,
-      color: "text-purple-500",
+      color: "text-purple-700",
       skills: [
         locale === "fr" ? "Conférences Tech" : "Tech Conferences",
         locale === "fr" ? "Hackathons & Coding Competitions" : "Hackathons & Coding Competitions",
@@ -143,7 +143,7 @@ export default function AboutPage() {
     {
       category: locale === "fr" ? "Formation & Enseignement" : "Training & Teaching",
       icon: TrophyIcon,
-      color: "text-orange-500",
+      color: "text-foreground",
       skills: [
         locale === "fr" ? "Formations Backend (Node.js, Python)" : "Backend Training (Node.js, Python)",
         locale === "fr" ? "Workshops Bases de Données" : "Database Workshops",
@@ -159,7 +159,7 @@ export default function AboutPage() {
     {
       number: "50+",
       label: locale === "fr" ? "Événements Organisés" : "Events Organized",
-      color: "text-purple-500"
+      color: "text-purple-700"
     },
     {
       number: "100+",
@@ -169,7 +169,7 @@ export default function AboutPage() {
     {
       number: "5000+",
       label: locale === "fr" ? "Participants" : "Attendees",
-      color: "text-emerald-500"
+      color: "text-purple-700"
     },
     {
       number: "98%",
@@ -189,7 +189,7 @@ export default function AboutPage() {
       <div className="w-full max-w-6xl mx-auto space-y-12">
         {/* Header */}
         <div className="space-y-6">
-        <h1 className="text-4xl lg:text-5xl font-bold bg-linear-to-r from-foreground via-primary to-purple-500 bg-clip-text text-transparent">
+        <h1 className="text-4xl lg:text-5xl font-bold bg-linear-to-r from-foreground via-primary to-purple-700 bg-clip-text text-transparent">
           {locale === "fr" ? "À propos de moi" : "About Me"}
         </h1>
         <div className="space-y-4">
@@ -210,8 +210,8 @@ export default function AboutPage() {
                   : "+8 years in backend architecture, APIs and scalable systems"}
               </p>
             </div>
-            <div className="p-6 bg-purple-500/5 border-2 border-purple-500/20 rounded-xl">
-              <SparklesIcon className="w-8 h-8 text-purple-500 mb-3" />
+            <div className="p-6 bg-purple-700/5 border-2 border-purple-700/20 rounded-xl">
+              <SparklesIcon className="w-8 h-8 text-purple-700 mb-3" />
               <h3 className="text-lg font-bold text-foreground mb-2">
                 {locale === "fr" ? "Tech Event Planner" : "Tech Event Planner"}
               </h3>
@@ -221,8 +221,8 @@ export default function AboutPage() {
                   : "Tech event planning: conferences, hackathons, meetups"}
               </p>
             </div>
-            <div className="p-6 bg-orange-500/5 border-2 border-orange-500/20 rounded-xl">
-              <TrophyIcon className="w-8 h-8 text-orange-500 mb-3" />
+            <div className="p-6 bg-purple-700/5 border-2 border-purple-700/20 rounded-xl">
+              <TrophyIcon className="w-8 h-8 text-purple-700 mb-3" />
               <h3 className="text-lg font-bold text-foreground mb-2">
                 {locale === "fr" ? "Formateur" : "Trainer"}
               </h3>
@@ -239,7 +239,7 @@ export default function AboutPage() {
       {/* Mon histoire */}
       <section className="space-y-6">
         <h2 className="text-3xl font-bold text-foreground flex items-center gap-3">
-          <TrophyIcon className="w-8 h-8 text-purple-500" />
+          <TrophyIcon className="w-8 h-8 text-purple-700" />
           {locale === "fr" ? "Mon Histoire" : "My Story"}
         </h2>
         <div className="prose prose-lg max-w-none">
@@ -254,7 +254,7 @@ export default function AboutPage() {
         {achievements.map((achievement, idx) => (
           <div
             key={idx}
-            className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 text-center hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/10 transition-all"
+            className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 text-center hover:border-purple-700 hover:shadow-lg hover:shadow-purple-700/10 transition-all"
           >
             <div className={`text-4xl font-bold ${achievement.color} mb-2`}>
               {achievement.number}
@@ -276,7 +276,7 @@ export default function AboutPage() {
               key={item.id}
               className="relative pl-8 pb-6 border-l-2 border-border last:pb-0 group"
             >
-              <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-foreground group-hover:bg-purple-500 transition-colors" />
+              <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-foreground group-hover:bg-purple-700 transition-colors" />
               <div className="flex items-start justify-between gap-4 mb-2">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-1 flex-wrap">
@@ -303,7 +303,7 @@ export default function AboutPage() {
                         key={posIndex}
                         className={posIndex > 0 ? "pt-4 mt-4 border-t border-border/50" : ""}
                       >
-                        <h3 className="text-xl font-bold text-foreground group-hover:text-purple-500 transition-colors">
+                        <h3 className="text-xl font-bold text-foreground group-hover:text-purple-700 transition-colors">
                           {position.title}
                         </h3>
                         <p className="text-primary font-medium mb-2">{position.company}</p>
@@ -329,7 +329,7 @@ export default function AboutPage() {
             return (
               <div
                 key={idx}
-                className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/10 transition-all"
+                className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 hover:border-purple-700 hover:shadow-lg hover:shadow-purple-700/10 transition-all"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Icon className={`w-8 h-8 ${category.color}`} />
@@ -338,7 +338,7 @@ export default function AboutPage() {
                 <ul className="space-y-2">
                   {category.skills.map((skill, skillIdx) => (
                     <li key={skillIdx} className="flex items-center gap-2 text-muted-foreground">
-                      <span className="text-purple-500">✓</span>
+                      <span className="text-purple-700">✓</span>
                       <span>{skill}</span>
                     </li>
                   ))}
@@ -350,7 +350,7 @@ export default function AboutPage() {
       </section>
 
       {/* Call to action */}
-      <section className="bg-card/80 backdrop-blur-sm border-2 border-purple-500/20 rounded-xl p-8 text-center space-y-4">
+      <section className="bg-card/80 backdrop-blur-sm border-2 border-purple-700/20 rounded-xl p-8 text-center space-y-4">
         <h2 className="text-2xl font-bold text-foreground">
           {locale === "fr" 
             ? "Travaillons ensemble !" 
@@ -370,13 +370,13 @@ export default function AboutPage() {
           </a>
           <a
             href="/events"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-purple-500 text-white rounded-lg font-medium hover:bg-purple-600 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-purple-700 text-white rounded-lg font-medium hover:bg-purple-600 transition-colors"
           >
             {locale === "fr" ? "Découvrir mes événements" : "Discover My Events"}
           </a>
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 border-2 border-border hover:border-purple-500 text-foreground rounded-lg font-medium transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 border-2 border-border hover:border-purple-700 text-foreground rounded-lg font-medium transition-colors"
           >
             {locale === "fr" ? "Me contacter" : "Contact Me"}
           </a>

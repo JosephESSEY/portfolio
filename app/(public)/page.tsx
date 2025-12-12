@@ -76,34 +76,3 @@ export default async function HomePage() {
     </div>
   )
 }
-
-        {/* About */}
-        <AboutCard bio={profile.bio} />
-
-        {/* Stats */}
-        {stats.length > 0 && <StatsCard stats={stats} />}
-
-        {/* Skills */}
-        {Object.entries(skillsByCategory)
-          .slice(0, 2)
-          .map(([category, skills]) => (
-            <SkillsCard key={category} category={category} skills={skills} />
-          ))}
-
-        {/* Timeline */}
-        <TimelineCard items={timeline} />
-
-        {/* Quote */}
-        {quoteBlock && <QuoteCard quote={quoteBlock.content} />}
-
-        {/* Blog Posts */}
-        {blogPosts.slice(0, 2).map((post) => (
-          <BlogCard key={post.id} post={post} size="medium" />
-        ))}
-
-        {/* Contact CTA */}
-        <ContactCard email={profile.email} available={profile.available} />
-      </BentoGrid>
-    </div>
-  )
-}

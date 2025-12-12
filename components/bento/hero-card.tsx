@@ -33,7 +33,7 @@ export function HeroCard({ profile }: HeroCardProps) {
         </div>
         {profile.available && (
           <motion.div
-            className="absolute -bottom-0.5 -right-0.5 w-4 h-4 bg-emerald-500 rounded-full border-2 border-card"
+            className="absolute -bottom-0.5 -right-0.5 w-4 h-4 bg-purple-700 rounded-full border-2 border-card"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.3, delay: 0.4, type: "spring" }}

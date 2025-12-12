@@ -215,7 +215,7 @@ export default function EventsPage() {
   const getTypeBadgeColor = (type: Event["type"]) => {
     const colors = {
       corporate: "bg-blue-500/10 text-blue-500 border-blue-500/20",
-      private: "bg-purple-500/10 text-purple-500 border-purple-500/20",
+      private: "bg-purple-700/10 text-purple-700 border-purple-700/20",
       digital: "bg-emerald-500/10 text-emerald-500 border-emerald-500/20"
     }
     return colors[type]
@@ -225,7 +225,7 @@ export default function EventsPage() {
     <div className="w-full max-w-6xl mx-auto space-y-8">
       {/* Header */}
       <div className="space-y-4">
-        <h1 className="text-4xl lg:text-5xl font-bold bg-linear-to-r from-foreground via-purple-500 to-primary bg-clip-text text-transparent">
+        <h1 className="text-4xl lg:text-5xl font-bold bg-linear-to-r from-foreground via-purple-700 to-primary bg-clip-text text-transparent">
           {locale === "fr" ? "Mes Événements" : "My Events"}
         </h1>
         <p className="text-lg text-muted-foreground max-w-3xl">
@@ -238,8 +238,8 @@ export default function EventsPage() {
 
       {/* Stats rapides */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/10 transition-all">
-          <div className="text-3xl font-bold text-purple-500 mb-2">50+</div>
+        <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 hover:border-purple-700 hover:shadow-lg hover:shadow-purple-700/10 transition-all">
+          <div className="text-3xl font-bold text-purple-700 mb-2">50+</div>
           <div className="text-sm text-muted-foreground">
             {locale === "fr" ? "Événements" : "Events"}
           </div>
@@ -250,14 +250,14 @@ export default function EventsPage() {
             {locale === "fr" ? "Participants" : "Attendees"}
           </div>
         </div>
-        <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 hover:border-emerald-500 hover:shadow-lg hover:shadow-emerald-500/10 transition-all">
-          <div className="text-3xl font-bold text-emerald-500 mb-2">98%</div>
+        <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 hover:border-purple-700 transition-all">
+          <div className="text-3xl font-bold text-purple-700 mb-2">98%</div>
           <div className="text-sm text-muted-foreground">
-            {locale === "fr" ? "Satisfaction" : "Satisfaction"}
+            {locale === "fr" ? "Taux de satisfaction" : "Satisfaction Rate"}
           </div>
         </div>
-        <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/10 transition-all">
-          <div className="text-3xl font-bold text-orange-500 mb-2">3</div>
+        <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 hover:border-foreground transition-all">
+          <div className="text-3xl font-bold text-foreground mb-2">3</div>
           <div className="text-sm text-muted-foreground">
             {locale === "fr" ? "Pays" : "Countries"}
           </div>
@@ -268,13 +268,13 @@ export default function EventsPage() {
       <div className="space-y-6">
         {mockEvents.map((event, index) => (
           <Dialog key={event.id}>
-            <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 lg:p-8 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/10 transition-all group">
+            <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 lg:p-8 hover:border-purple-700 hover:shadow-lg hover:shadow-purple-700/10 transition-all group">
               <div className="space-y-4">
                 {/* Header de l'événement */}
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
                   <div className="flex-1 space-y-2">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <h2 className="text-2xl font-bold text-foreground group-hover:text-purple-500 transition-colors">
+                      <h2 className="text-2xl font-bold text-foreground group-hover:text-purple-700 transition-colors">
                         {event.title}
                       </h2>
                       <span className={`text-xs px-3 py-1 rounded-full border ${getTypeBadgeColor(event.type)}`}>
@@ -336,7 +336,7 @@ export default function EventsPage() {
 
                 {/* Bouton pour voir les détails/images */}
                 <DialogTrigger asChild>
-                  <button className="w-full mt-4 flex items-center justify-center gap-2 px-4 py-3 bg-purple-500 hover:bg-purple-600 text-white rounded-lg font-medium transition-all">
+                  <button className="w-full mt-4 flex items-center justify-center gap-2 px-4 py-3 bg-purple-700 hover:bg-purple-600 text-white rounded-lg font-medium transition-all">
                     <EyeIcon className="w-5 h-5" />
                     {locale === "fr" ? "Voir les photos et détails" : "View Photos & Details"}
                   </button>
@@ -402,13 +402,13 @@ export default function EventsPage() {
                 {/* Réalisations */}
                 <div className="space-y-2">
                   <h3 className="font-semibold text-lg flex items-center gap-2">
-                    <TrophyIcon className="w-5 h-5 text-purple-500" />
+                    <TrophyIcon className="w-5 h-5 text-purple-700" />
                     {locale === "fr" ? "Réalisations clés" : "Key Achievements"}
                   </h3>
                   <ul className="space-y-2">
                     {event.achievements.map((achievement, idx) => (
                       <li key={idx} className="flex items-start gap-2">
-                        <span className="text-purple-500 mt-1">✓</span>
+                        <span className="text-purple-700 mt-1">✓</span>
                         <span className="text-muted-foreground">{achievement}</span>
                       </li>
                     ))}
@@ -439,7 +439,7 @@ export default function EventsPage() {
       </div>
 
       {/* Call to action */}
-      <div className="bg-card/80 backdrop-blur-sm border-2 border-purple-500/20 rounded-xl p-8 text-center space-y-4">
+      <div className="bg-card/80 backdrop-blur-sm border-2 border-purple-700/20 rounded-xl p-8 text-center space-y-4">
         <h2 className="text-2xl font-bold text-foreground">
           {locale === "fr" 
             ? "Un projet d'événement en tête ?" 
@@ -452,7 +452,7 @@ export default function EventsPage() {
         </p>
         <a
           href="/contact"
-          className="inline-flex items-center gap-2 px-6 py-3 bg-purple-500 text-white rounded-lg font-medium hover:bg-purple-600 transition-colors"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-purple-700 text-white rounded-lg font-medium hover:bg-purple-600 transition-colors"
         >
           {locale === "fr" ? "Planifions votre événement" : "Let's Plan Your Event"}
         </a>

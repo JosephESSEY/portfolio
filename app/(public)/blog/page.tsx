@@ -44,7 +44,7 @@ export default function BlogPage() {
     <div className="w-full max-w-6xl mx-auto space-y-8">
       {/* Header */}
       <div className="space-y-4">
-        <h1 className="text-4xl lg:text-5xl font-bold bg-linear-to-r from-foreground via-primary to-purple-500 bg-clip-text text-transparent">
+        <h1 className="text-4xl lg:text-5xl font-bold bg-linear-to-r from-foreground via-primary to-purple-700 bg-clip-text text-transparent">
           {locale === "fr" ? "Blog & Ressources" : "Blog & Resources"}
         </h1>
         <p className="text-lg text-muted-foreground max-w-3xl">
@@ -67,7 +67,7 @@ export default function BlogPage() {
             placeholder={locale === "fr" ? "Rechercher un article..." : "Search articles..."}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-12 pr-4 py-3 bg-card/80 border-2 border-border rounded-xl focus:border-purple-500 focus:outline-none transition-colors text-foreground placeholder:text-muted-foreground"
+            className="w-full pl-12 pr-4 py-3 bg-card/80 border-2 border-border rounded-xl focus:border-purple-700 focus:outline-none transition-colors text-foreground placeholder:text-muted-foreground"
           />
         </div>
 
@@ -79,8 +79,8 @@ export default function BlogPage() {
               onClick={() => setSelectedTag(tag)}
               className={`px-4 py-2 rounded-lg font-medium transition-all ${
                 selectedTag === tag
-                  ? "bg-purple-500 text-white shadow-lg shadow-purple-500/20"
-                  : "bg-card/80 text-muted-foreground border-2 border-border hover:border-purple-500"
+                  ? "bg-purple-700 text-white shadow-lg shadow-purple-700/20"
+                  : "bg-card/80 text-muted-foreground border-2 border-border hover:border-purple-700"
               }`}
             >
               {tag === "all" ? (locale === "fr" ? "Tous" : "All") : tag}
@@ -91,7 +91,7 @@ export default function BlogPage() {
 
       {/* Featured Post (First Post) */}
       {filteredPosts.length > 0 && (
-        <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl overflow-hidden hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/10 transition-all group">
+        <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl overflow-hidden hover:border-purple-700 hover:shadow-lg hover:shadow-purple-700/10 transition-all group">
           <div className="grid lg:grid-cols-2 gap-0">
             {/* Image */}
             <div className="relative h-64 lg:h-full w-full overflow-hidden">
@@ -102,7 +102,7 @@ export default function BlogPage() {
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute top-4 left-4">
-                <span className="px-3 py-1 text-xs font-medium bg-purple-500/90 text-white rounded-full backdrop-blur-sm border border-purple-400/50">
+                <span className="px-3 py-1 text-xs font-medium bg-purple-700/90 text-white rounded-full backdrop-blur-sm border border-purple-400/50">
                   {locale === "fr" ? "★ À la une" : "★ Featured"}
                 </span>
               </div>
@@ -122,7 +122,7 @@ export default function BlogPage() {
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-foreground group-hover:text-purple-500 transition-colors">
+              <h2 className="text-3xl font-bold text-foreground group-hover:text-purple-700 transition-colors">
                 {filteredPosts[0].title}
               </h2>
 
@@ -143,7 +143,7 @@ export default function BlogPage() {
 
               <a
                 href={`/blog/${filteredPosts[0].slug}`}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-purple-500 text-white rounded-lg font-medium hover:bg-purple-600 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-purple-700 text-white rounded-lg font-medium hover:bg-purple-600 transition-colors"
               >
                 {locale === "fr" ? "Lire l'article" : "Read article"}
                 <ArrowRightIcon className="w-4 h-4" />
@@ -158,7 +158,7 @@ export default function BlogPage() {
         {filteredPosts.slice(1).map((post) => (
           <article
             key={post.id}
-            className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl overflow-hidden hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/10 transition-all group"
+            className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl overflow-hidden hover:border-purple-700 hover:shadow-lg hover:shadow-purple-700/10 transition-all group"
           >
             {/* Image */}
             <div className="relative h-48 w-full overflow-hidden">
@@ -180,7 +180,7 @@ export default function BlogPage() {
                 <span>{post.readTime}</span>
               </div>
 
-              <h3 className="text-xl font-bold text-foreground group-hover:text-purple-500 transition-colors line-clamp-2">
+              <h3 className="text-xl font-bold text-foreground group-hover:text-purple-700 transition-colors line-clamp-2">
                 {post.title}
               </h3>
 
@@ -201,7 +201,7 @@ export default function BlogPage() {
 
               <a
                 href={`/blog/${post.slug}`}
-                className="inline-flex items-center gap-2 text-sm font-medium text-purple-500 hover:text-purple-600 transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-medium text-purple-700 hover:text-purple-600 transition-colors"
               >
                 {locale === "fr" ? "Lire plus" : "Read more"}
                 <ArrowRightIcon className="w-4 h-4" />
@@ -225,7 +225,7 @@ export default function BlogPage() {
               setSelectedTag("all")
               setSearchQuery("")
             }}
-            className="text-purple-500 hover:text-purple-600 font-medium"
+            className="text-purple-700 hover:text-purple-600 font-medium"
           >
             {locale === "fr" ? "Réinitialiser les filtres" : "Reset filters"}
           </button>
@@ -233,8 +233,8 @@ export default function BlogPage() {
       )}
 
       {/* Newsletter CTA */}
-      <div className="bg-card/80 backdrop-blur-sm border-2 border-purple-500/20 rounded-xl p-8 text-center space-y-4">
-        <MailIcon className="w-12 h-12 text-purple-500 mx-auto" />
+      <div className="bg-card/80 backdrop-blur-sm border-2 border-purple-700/20 rounded-xl p-8 text-center space-y-4">
+        <MailIcon className="w-12 h-12 text-purple-700 mx-auto" />
         <h2 className="text-2xl font-bold text-foreground">
           {locale === "fr" 
             ? "Restez informé des nouveaux articles" 
@@ -247,7 +247,7 @@ export default function BlogPage() {
         </p>
         <a
           href="/contact"
-          className="inline-flex items-center gap-2 px-6 py-3 bg-purple-500 text-white rounded-lg font-medium hover:bg-purple-600 transition-colors"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-purple-700 text-white rounded-lg font-medium hover:bg-purple-600 transition-colors"
         >
           {locale === "fr" ? "S'abonner à la newsletter" : "Subscribe to newsletter"}
           <ArrowRightIcon className="w-4 h-4" />

@@ -33,7 +33,7 @@ export default function ServicesPage() {
       description: "Conception et développement de systèmes backend robustes, scalables et performants",
       descriptionEn: "Design and development of robust, scalable and high-performance backend systems",
       icon: CodeIcon,
-      iconColor: "text-blue-500",
+      iconColor: "text-purple-700",
       price: "",
       priceEn: "",
       features: [
@@ -72,7 +72,7 @@ export default function ServicesPage() {
       description: "Orchestration d'événements tech mémorables - Conférences, hackathons, meetups et séminaires corporate tech",
       descriptionEn: "Orchestration of memorable tech events - Conferences, hackathons, meetups and corporate tech seminars",
       icon: CalendarIcon,
-      iconColor: "text-purple-500",
+      iconColor: "text-purple-700",
       price: "",
       priceEn: "",
       features: [
@@ -111,7 +111,7 @@ export default function ServicesPage() {
       description: "Déploiement, infrastructure cloud et automatisation pour des applications scalables",
       descriptionEn: "Deployment, cloud infrastructure and automation for scalable applications",
       icon: SparklesIcon,
-      iconColor: "text-emerald-500",
+      iconColor: "text-purple-700",
       price: "",
       priceEn: "",
       features: [
@@ -150,7 +150,7 @@ export default function ServicesPage() {
       description: "Formation de développeurs et transmission d'expertise backend, databases et bonnes pratiques",
       descriptionEn: "Developer training and backend expertise transfer, databases and best practices",
       icon: TrophyIcon,
-      iconColor: "text-orange-500",
+      iconColor: "text-foreground",
       price: "",
       priceEn: "",
       features: [
@@ -248,7 +248,7 @@ export default function ServicesPage() {
     <div className="w-full max-w-6xl mx-auto space-y-12">
       {/* Header */}
       <div className="space-y-4">
-        <h1 className="text-4xl lg:text-5xl font-bold bg-linear-to-r from-foreground via-primary to-purple-500 bg-clip-text text-transparent">
+        <h1 className="text-4xl lg:text-5xl font-bold bg-linear-to-r from-foreground via-primary to-purple-700 bg-clip-text text-transparent">
           {locale === "fr" ? "Mes Services" : "My Services"}
         </h1>
         <p className="text-lg text-muted-foreground max-w-3xl">
@@ -266,16 +266,16 @@ export default function ServicesPage() {
           return (
             <div
               key={service.id}
-              className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-8 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/10 transition-all group space-y-6"
+              className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-8 hover:border-purple-700 hover:shadow-lg hover:shadow-purple-700/10 transition-all group space-y-6"
             >
               {/* Header */}
               <div className="space-y-3">
                 <div className="flex items-start justify-between gap-4">
-                  <div className={`p-3 rounded-xl bg-card border-2 border-border group-hover:border-purple-500 transition-colors ${service.iconColor}`}>
+                  <div className={`p-3 rounded-xl bg-card border-2 border-border group-hover:border-purple-700 transition-colors ${service.iconColor}`}>
                     <Icon className="w-8 h-8" />
                   </div>
                 </div>
-                <h2 className="text-2xl font-bold text-foreground group-hover:text-purple-500 transition-colors">
+                <h2 className="text-2xl font-bold text-foreground group-hover:text-purple-700 transition-colors">
                   {locale === "fr" ? service.title : service.titleEn}
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">
@@ -291,7 +291,7 @@ export default function ServicesPage() {
                 <ul className="space-y-2">
                   {(locale === "fr" ? service.features : service.featuresEn).map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <CheckIcon className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
+                      <CheckIcon className="w-5 h-5 text-purple-700 shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -311,7 +311,7 @@ export default function ServicesPage() {
               {/* CTA */}
               <a
                 href="/contact"
-                className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-purple-500/10 hover:bg-purple-500 text-purple-500 hover:text-white rounded-lg font-medium transition-all border border-purple-500/20 hover:border-purple-500"
+                className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-purple-700/10 hover:bg-purple-700 text-purple-700 hover:text-white rounded-lg font-medium transition-all border border-purple-700/20 hover:border-purple-700"
               >
                 {locale === "fr" ? "Demander un devis" : "Request a quote"}
                 <ArrowRightIcon className="w-4 h-4" />
@@ -338,10 +338,10 @@ export default function ServicesPage() {
           {processSteps.map((step, idx) => (
             <div
               key={idx}
-              className="relative bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 hover:border-purple-500 transition-all"
+              className="relative bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 hover:border-purple-700 transition-all"
             >
               <div className="space-y-3">
-                <span className="text-5xl font-bold text-purple-500/20">{step.number}</span>
+                <span className="text-5xl font-bold text-purple-700/20">{step.number}</span>
                 <h3 className="text-xl font-bold text-foreground">{step.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
               </div>
@@ -362,14 +362,14 @@ export default function ServicesPage() {
           {faqs.map((faq, idx) => (
             <div
               key={idx}
-              className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl overflow-hidden transition-all hover:border-purple-500"
+              className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl overflow-hidden transition-all hover:border-purple-700"
             >
               <button
                 onClick={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)}
                 className="w-full px-6 py-4 flex items-center justify-between text-left transition-colors hover:bg-muted/50"
               >
                 <h3 className="text-lg font-bold text-foreground pr-4">{faq.question}</h3>
-                <span className={`text-2xl text-purple-500 transition-transform duration-300 ${openFaqIndex === idx ? 'rotate-180' : ''}`}>
+                <span className={`text-2xl text-purple-700 transition-transform duration-300 ${openFaqIndex === idx ? 'rotate-180' : ''}`}>
                   ▼
                 </span>
               </button>
@@ -386,8 +386,8 @@ export default function ServicesPage() {
       </section>
 
       {/* Final CTA */}
-      <div className="bg-card/80 backdrop-blur-sm border-2 border-purple-500/20 rounded-xl p-8 text-center space-y-4">
-        <SparklesIcon className="w-12 h-12 text-purple-500 mx-auto" />
+      <div className="bg-card/80 backdrop-blur-sm border-2 border-purple-700/20 rounded-xl p-8 text-center space-y-4">
+        <SparklesIcon className="w-12 h-12 text-purple-700 mx-auto" />
         <h2 className="text-2xl font-bold text-foreground">
           {locale === "fr" 
             ? "Prêt à démarrer votre projet ?" 
@@ -400,7 +400,7 @@ export default function ServicesPage() {
         </p>
         <a
           href="/contact"
-          className="inline-flex items-center gap-2 px-6 py-3 bg-purple-500 text-white rounded-lg font-medium hover:bg-purple-600 transition-colors"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-purple-700 text-white rounded-lg font-medium hover:bg-purple-600 transition-colors"
         >
           {locale === "fr" ? "Contactez-moi maintenant" : "Contact Me Now"}
           <ArrowRightIcon className="w-4 h-4" />
