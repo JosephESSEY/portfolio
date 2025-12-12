@@ -21,7 +21,7 @@ export function ProjectCard({ project, size = "medium", delay = 0 }: ProjectCard
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/5" />
+        <div className="absolute inset-0 bg-black/40" />
 
         <div className="absolute inset-0 p-4 flex flex-col justify-end">
           <div className="flex items-start justify-between gap-3">

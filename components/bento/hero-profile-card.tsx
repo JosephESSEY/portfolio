@@ -12,10 +12,10 @@ interface HeroProfileCardProps {
 
 export function HeroProfileCard({ profile, delay = 0 }: HeroProfileCardProps) {
   return (
-    <BentoCard size="wide" className="col-span-1 lg:col-span-1 row-span-1 lg:row-span-1 relative overflow-hidden bg-gradient-to-br from-background via-background to-muted/20 border border-border/40 shadow-xl">
+    <BentoCard size="wide" className="col-span-1 lg:col-span-1 row-span-1 lg:row-span-1 relative overflow-hidden bg-background border border-border/40 shadow-xl">
       
       {/* Fond décoratif avec gradient animé */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-purple-500/5"></div>
+
       <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute -bottom-20 -left-20 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
       
@@ -27,7 +27,7 @@ export function HeroProfileCard({ profile, delay = 0 }: HeroProfileCardProps) {
           animate={{ scale: 1, opacity: 1, rotateY: 0 }}
           transition={{ duration: 0.8, delay: delay + 0.2, type: "spring", bounce: 0.3 }}
         >
-          <div className="w-36 h-36 lg:w-40 lg:h-40 rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-purple-500/20 p-1 shadow-2xl backdrop-blur-sm">
+          <div className="w-36 h-36 lg:w-40 lg:h-40 rounded-2xl overflow-hidden bg-card/50 border-2 border-border p-1 shadow-2xl backdrop-blur-sm">
             <div className="w-full h-full rounded-xl overflow-hidden bg-background">
               <Image
                 src={profile.avatarUrl || "/placeholder.svg?height=160&width=160&query=professional developer"}
@@ -43,7 +43,7 @@ export function HeroProfileCard({ profile, delay = 0 }: HeroProfileCardProps) {
           {/* Status indicator avec animation */}
           {profile.available && (
             <motion.div
-              className="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full border-4 border-background shadow-lg flex items-center justify-center"
+              className="absolute -bottom-2 -right-2 w-8 h-8 bg-emerald-500 rounded-full border-4 border-background shadow-lg flex items-center justify-center"
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
               transition={{ duration: 0.5, delay: delay + 0.8, type: "spring", bounce: 0.6 }}

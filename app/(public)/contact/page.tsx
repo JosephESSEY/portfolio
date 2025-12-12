@@ -87,8 +87,8 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Email</p>
-                <a href="mailto:hello@alexandre.dev" className="font-medium text-foreground hover:underline">
-                  hello@alexandre.dev
+                <a href="mailto:hello@josephessey.dev" className="font-medium text-foreground hover:underline">
+                  hello@josephessey.dev
                 </a>
               </div>
             </div>
@@ -101,7 +101,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Localisation</p>
-                <p className="font-medium text-foreground">Paris, France</p>
+                <p className="font-medium text-foreground">Lomé, Togo</p>
               </div>
             </div>
           </BentoCard>

@@ -336,7 +336,7 @@ export default function EventsPage() {
 
                 {/* Bouton pour voir les détails/images */}
                 <DialogTrigger asChild>
-                  <button className="w-full mt-4 flex items-center justify-center gap-2 px-4 py-3 bg-purple-500/10 hover:bg-purple-500 hover:text-white text-purple-500 rounded-lg font-medium transition-all border border-purple-500/20 hover:border-purple-500">
+                  <button className="w-full mt-4 flex items-center justify-center gap-2 px-4 py-3 bg-purple-500 hover:bg-purple-600 text-white rounded-lg font-medium transition-all">
                     <EyeIcon className="w-5 h-5" />
                     {locale === "fr" ? "Voir les photos et détails" : "View Photos & Details"}
                   </button>
@@ -439,7 +439,7 @@ export default function EventsPage() {
       </div>
 
       {/* Call to action */}
-      <div className="bg-linear-to-br from-purple-500/10 via-primary/10 to-purple-500/10 border-2 border-purple-500/20 rounded-xl p-8 text-center space-y-4">
+      <div className="bg-card/80 backdrop-blur-sm border-2 border-purple-500/20 rounded-xl p-8 text-center space-y-4">
         <h2 className="text-2xl font-bold text-foreground">
           {locale === "fr" 
             ? "Un projet d'événement en tête ?" 

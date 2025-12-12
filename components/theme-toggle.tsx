@@ -27,9 +27,13 @@ export function ThemeToggle() {
   ]
 
   return (
-    <div ref={ref} className="relative">
+    <div 
+      ref={ref} 
+      className="relative"
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
       <button
-        onClick={() => setIsOpen(!isOpen)}
         className="p-2 rounded-xl bg-card border border-border/50 hover:border-border transition-colors"
         aria-label="Toggle theme"
       >

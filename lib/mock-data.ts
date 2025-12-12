@@ -17,14 +17,14 @@ import type {
 export const mockProfile: Profile = {
   id: "1",
   name: "Joseph ESSEY",
-  role: "Full-Stack Developer & Event Planner",
-  tagline: "Je crée des expériences digitales innovantes et des événements mémorables",
-  bio: `Professionnel aux multiples talents, je combine deux passions : le développement web et l'organisation d'événements. Avec +8 ans d'expérience en développement, je crée des solutions digitales performantes et élégantes. En tant qu'Event Planner, je conçois et orchestre des événements uniques qui marquent les esprits.
+  role: "Backend Developer & Tech Event Planner",
+  tagline: "J'architecture des systèmes backend robustes, j'orchestre des événements tech et je forme les développeurs",
+  bio: `Triple expertise unique : architecture backend, organisation d'événements tech et formation. Avec +8 ans d'expérience, je conçois des APIs robustes, optimise des bases de données et déploie des infrastructures cloud performantes (Node.js, Python, PostgreSQL, Redis, Docker).
 
-Ma double expertise me permet d'apporter une vision 360° à vos projets : des plateformes web sur-mesure pour vos événements, des expériences digitales immersives, et une approche unique alliant technologie et créativité événementielle.`,
+J'orchestre des événements tech innovants (conférences, hackathons, meetups) et je forme des développeurs aux technologies backend modernes. Formateur passionné, je transmets mon expertise technique à travers workshops, bootcamps et formations sur-mesure pour entreprises et écoles.`,
   avatarUrl: "/joseph.jpg",
   email: "hello@alexandre.dev",
-  location: "Paris, France",
+  location: "Lomé, Togo",
   available: true,
 }
 

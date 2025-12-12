@@ -25,7 +25,7 @@ export function ProfileSidebar({ profile }: ProfileSidebarProps) {
         animate={{ scale: 1, opacity: 1, rotateY: 0 }}
         transition={{ duration: 0.8, delay: 0.2, type: "spring", bounce: 0.3 }}
       >
-        <div className="w-32 h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden bg-linear-to-br from-primary/20 to-purple-500/20 p-1 shadow-2xl backdrop-blur-sm">
+        <div className="w-32 h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden bg-card/50 border-2 border-border p-1 shadow-2xl backdrop-blur-sm">
           <div className="w-full h-full rounded-full overflow-hidden bg-background">
             <Image
               src={profile.avatarUrl || "/placeholder.svg?height=160&width=160&query=professional developer"}
@@ -41,7 +41,7 @@ export function ProfileSidebar({ profile }: ProfileSidebarProps) {
         {/* Status indicator avec animation */}
         {profile.available && (
           <motion.div
-            className="absolute -bottom-1 -right-1 w-6 h-6 bg-linear-to-r from-emerald-400 to-emerald-500 rounded-full border-3 border-background shadow-lg flex items-center justify-center"
+            className="absolute -bottom-1 -right-1 w-6 h-6 bg-emerald-500 rounded-full border-3 border-background shadow-lg flex items-center justify-center"
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ duration: 0.5, delay: 0.8, type: "spring", bounce: 0.6 }}
@@ -78,11 +78,30 @@ export function ProfileSidebar({ profile }: ProfileSidebarProps) {
 
       {/* Séparateur décoratif */}
       <motion.div
-        className="w-16 h-0.5 bg-linear-to-r from-transparent via-border to-transparent mb-6"
+        className="w-16 h-0.5 bg-border mb-6"
         initial={{ opacity: 0, scaleX: 0 }}
         animate={{ opacity: 1, scaleX: 1 }}
         transition={{ duration: 0.8, delay: 0.7 }}
       />
+
+      {/* Surnom & Slogan */}
+      <motion.div
+        className="space-y-3 mb-6"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.8 }}
+      >
+        <div className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-lg">
+          <p className="text-sm font-bold text-primary">
+            Le Dev Absolu
+          </p>
+        </div>
+        <div className="px-3 py-1.5 bg-card/50 border border-border rounded-md">
+          <p className="text-xs text-muted-foreground italic">
+            Le développeur le plus transparent du game
+          </p>
+        </div>
+      </motion.div>
 
     </div>
   )

@@ -26,9 +26,13 @@ export function LocaleToggle() {
   ]
 
   return (
-    <div ref={ref} className="relative">
+    <div 
+      ref={ref} 
+      className="relative"
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
       <button
-        onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-card border border-border/50 hover:border-border transition-colors text-sm font-medium"
         aria-label="Change language"
       >
