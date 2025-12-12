@@ -71,10 +71,10 @@ export const metadata: Metadata = {
     siteName: "Joseph ESSEY - Le Dev Absolu",
     images: [
       {
-        url: "/joseph.jpg",
+        url: "https://josephessey.dev/joseph.jpg",
         width: 1200,
         height: 630,
-        alt: "Joseph ESSEY - Backend Developer & Tech Event Planner",
+        alt: "Joseph ESSEY - Le Dev Absolu - Backend Developer & Tech Event Planner",
       },
     ],
   },
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     title: "Joseph ESSEY | Backend Developer & Tech Event Planner | Le Dev Absolu",
     description: "Backend Developer spécialisé en Node.js, Python, PostgreSQL. Organisateur d'événements tech et formateur. Le développeur le plus transparent du game.",
     creator: "@josephessey",
-    images: ["/joseph.jpg"],
+    images: ["https://josephessey.dev/joseph.jpg"],
   },
   robots: {
     index: true,
