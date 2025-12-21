@@ -67,6 +67,45 @@ export default function ServicesPage() {
     },
     {
       id: "2",
+      title: "Développement Frontend & UI/UX",
+      titleEn: "Frontend Development & UI/UX",
+      description: "Création d'interfaces web modernes, performantes et attrayantes avec React, Next.js et animations fluides",
+      descriptionEn: "Creation of modern, high-performance and attractive web interfaces with React, Next.js and smooth animations",
+      icon: CodeIcon,
+      iconColor: "text-blue-500",
+      price: "",
+      priceEn: "",
+      features: [
+        "Interfaces React & Next.js avec TypeScript",
+        "Designs responsifs (mobile, tablet, desktop)",
+        "Animations fluides (Framer Motion)",
+        "UI/UX optimisée & accessible (WCAG)",
+        "Intégration APIs & performance"
+      ],
+      featuresEn: [
+        "React & Next.js interfaces with TypeScript",
+        "Responsive designs (mobile, tablet, desktop)",
+        "Smooth animations (Framer Motion)",
+        "Optimized & accessible UI/UX (WCAG)",
+        "API integration & performance"
+      ],
+      deliverables: [
+        "Composants React réutilisables",
+        "Design system Figma",
+        "Code source versionné (Git)",
+        "Tests & documentation complète"
+      ],
+      deliverablesEn: [
+        "Reusable React components",
+        "Figma design system",
+        "Versioned source code (Git)",
+        "Complete testing & documentation"
+      ],
+      duration: "3-10 semaines",
+      durationEn: "3-10 weeks"
+    },
+    {
+      id: "3",
       title: "Organisation d'Événements Tech",
       titleEn: "Tech Event Planning",
       description: "Orchestration d'événements tech mémorables - Conférences, hackathons, meetups et séminaires corporate tech",
@@ -105,7 +144,7 @@ export default function ServicesPage() {
       durationEn: "2-16 weeks"
     },
     {
-      id: "3",
+      id: "4",
       title: "Cloud & DevOps",
       titleEn: "Cloud & DevOps",
       description: "Déploiement, infrastructure cloud et automatisation pour des applications scalables",
@@ -144,7 +183,7 @@ export default function ServicesPage() {
       durationEn: "2-6 weeks"
     },
     {
-      id: "4",
+      id: "5",
       title: "Formation & Mentorat Technique",
       titleEn: "Training & Technical Mentoring",
       description: "Formation de développeurs et transmission d'expertise backend, databases et bonnes pratiques",
@@ -387,7 +426,6 @@ export default function ServicesPage() {
 
       {/* Final CTA */}
       <div className="bg-card/80 backdrop-blur-sm border-2 border-purple-700/20 rounded-xl p-8 text-center space-y-4">
-        <SparklesIcon className="w-12 h-12 text-purple-700 mx-auto" />
         <h2 className="text-2xl font-bold text-foreground">
           {locale === "fr" 
             ? "Prêt à démarrer votre projet ?" 
