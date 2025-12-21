@@ -59,11 +59,11 @@ export default function HomePage() {
                 <div className="text-sm text-muted-foreground">{t.home.stats.dev}</div>
               </div>
               <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 hover:border-purple-700 hover:shadow-lg hover:shadow-purple-700/10 transition-all">
-                <div className="text-3xl font-bold text-purple-700 mb-2">10+</div>
+                <div className="text-3xl font-bold text-purple-700 mb-2">12+</div>
                 <div className="text-sm text-muted-foreground">{t.home.stats.events}</div>
               </div>
               <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all">
-                <div className="text-3xl font-bold text-primary mb-2">12+</div>
+                <div className="text-3xl font-bold text-primary mb-2">6+</div>
                 <div className="text-sm text-muted-foreground">{t.home.stats.projects}</div>
               </div>
               <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 hover:border-purple-700 hover:shadow-lg hover:shadow-purple-700/10 transition-all">
@@ -131,9 +131,14 @@ export default function HomePage() {
             </div>
 
             {/* Réseaux sociaux */}
-            <div className="space-y-4">
-              <h2 className="text-2xl lg:text-3xl font-bold text-foreground">{t.home.social.title}</h2>
-              <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="space-y-6 mt-8">
+              <div>
+                <h2 className="text-3xl lg:text-4xl font-bold bg-linear-to-r from-foreground via-primary to-purple-700 bg-clip-text text-transparent mb-2">
+                  {t.home.social.title}
+                </h2>
+                <p className="text-muted-foreground">Me retrouver et me suivre sur les réseaux</p>
+              </div>
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
                 {mockSocialLinks.map((link, index) => (
                   <SocialCard key={link.id} link={link} delay={0.15 + index * 0.1} />
                 ))}

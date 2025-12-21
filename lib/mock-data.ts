@@ -1,7 +1,3 @@
-// ============================================================
-// MOCK DATA - Replace with PostgreSQL queries later
-// ============================================================
-
 import type {
   Profile,
   Project,
@@ -155,17 +151,18 @@ export const mockServices: Service[] = [
 ]
 
 export const mockSocialLinks: SocialLink[] = [
-  { id: "1", platform: "GitHub", url: "https://github.com/alexandre", icon: "github", username: "@alexandre" },
+  { id: "1", platform: "GitHub", url: "https://github.com/JosephESSEY", icon: "github", username: "@josephessey" },
   {
     id: "2",
     platform: "LinkedIn",
-    url: "https://linkedin.com/in/alexandre",
+    url: "https://linkedin.com/in/JosephESSEY",
     icon: "linkedin",
-    username: "Alexandre Dupont",
+    username: "Joseph Essey",
   },
-  { id: "3", platform: "Twitter", url: "https://twitter.com/alexandre", icon: "twitter", username: "@alexandre_dev" },
-  { id: "4", platform: "Dribbble", url: "https://dribbble.com/alexandre", icon: "dribbble", username: "@alexandre" },
-  { id: "5", platform: "Email", url: "mailto:hello@alexandre.dev", icon: "mail", username: "hello@alexandre.dev" },
+  { id: "3", platform: "TikTok", url: "https://tiktok.com/@joseph_essey", icon: "tiktok", username: "@joseph_essey" },
+  { id: "4", platform: "X", url: "https://x.com/SedjroESSEY", icon: "twitter", username: "@SedjroESSEY" },
+  { id: "5", platform: "Roadmap.sh", url: "https://roadmap.sh/u/josephessey", icon: "roadmap", username: "Joseph ESSEY" },
+  { id: "6", platform: "Boot.dev", url: "https://boot.dev/u/josephessey", icon: "bootdev", username: "josephessey" },
 ]
 
 export const mockCustomBlocks: CustomBlock[] = [
@@ -176,9 +173,9 @@ export const mockCustomBlocks: CustomBlock[] = [
     content: "",
     metadata: {
       stats: [
-        { label: "Années d'expérience", value: "8+" },
-        { label: "Projets livrés", value: "50+" },
-        { label: "Clients satisfaits", value: "40+" },
+        { label: "Années d'expérience", value: "4+" },
+        { label: "Projets livrés", value: "6+" },
+        { label: "Clients satisfaits", value: "5+" },
         { label: "Lignes de code", value: "500k+" },
       ],
     },

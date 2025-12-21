@@ -120,17 +120,29 @@ export default function AboutPage() {
       color: "text-primary",
       skills: [
         "Node.js & Python",
+        "TypeScript & JavaScript",
         "PostgreSQL & MongoDB",
-        "Redis & RabbitMQ",
+        "Redis",
         "API REST & GraphQL",
-        "Docker & Kubernetes",
-        "Tailwind CSS"
+        "Docker"
+      ]
+    },
+    {
+      category: locale === "fr" ? "Développement Frontend" : "Frontend Development",
+      icon: CodeIcon,
+      color: "text-primary",
+      skills: [
+        "React & Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "UI/UX Design",
+        "Responsive Design"
       ]
     },
     {
       category: locale === "fr" ? "Tech Event Planning" : "Tech Event Planning",
       icon: SparklesIcon,
-      color: "text-purple-700",
+      color: "text-primary",
       skills: [
         locale === "fr" ? "Conférences Tech" : "Tech Conferences",
         locale === "fr" ? "Hackathons & Coding Competitions" : "Hackathons & Coding Competitions",
@@ -157,12 +169,12 @@ export default function AboutPage() {
 
   const achievements = [
     {
-      number: "50+",
+      number: "15+",
       label: locale === "fr" ? "Événements Organisés" : "Events Organized",
       color: "text-purple-700"
     },
     {
-      number: "100+",
+      number: "6+",
       label: locale === "fr" ? "Projets Web Livrés" : "Web Projects Delivered",
       color: "text-primary"
     },
@@ -174,7 +186,7 @@ export default function AboutPage() {
     {
       number: "98%",
       label: locale === "fr" ? "Satisfaction Client" : "Client Satisfaction",
-      color: "text-orange-500"
+      color: "text-primary"
     }
   ]
 
@@ -211,7 +223,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="p-6 bg-purple-700/5 border-2 border-purple-700/20 rounded-xl">
-              <SparklesIcon className="w-8 h-8 text-purple-700 mb-3" />
+              <SparklesIcon className="w-8 h-8 text-primary mb-3" />
               <h3 className="text-lg font-bold text-foreground mb-2">
                 {locale === "fr" ? "Tech Event Planner" : "Tech Event Planner"}
               </h3>
@@ -221,8 +233,8 @@ export default function AboutPage() {
                   : "Tech event planning: conferences, hackathons, meetups"}
               </p>
             </div>
-            <div className="p-6 bg-purple-700/5 border-2 border-purple-700/20 rounded-xl">
-              <TrophyIcon className="w-8 h-8 text-purple-700 mb-3" />
+            <div className="p-6 bg-primary/5 border-2 border-primary/20 rounded-xl">
+              <TrophyIcon className="w-8 h-8 text-primary mb-3" />
               <h3 className="text-lg font-bold text-foreground mb-2">
                 {locale === "fr" ? "Formateur" : "Trainer"}
               </h3>
