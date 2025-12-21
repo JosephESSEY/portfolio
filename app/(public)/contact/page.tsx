@@ -50,11 +50,11 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="name">Nom</Label>
-                    <Input id="name" name="name" placeholder="Jean Dupont" required />
+                    <Input id="name" name="name" placeholder="Joseph....." required />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
-                    <Input id="email" name="email" type="email" placeholder="jean@example.com" required />
+                    <Input id="email" name="email" type="email" placeholder="joseph@example.com" required />
                   </div>
                 </div>
                 <div className="space-y-2">
