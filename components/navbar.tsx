@@ -25,15 +25,15 @@ export function Navbar() {
     <>
       {/* Desktop Navbar */}
       <nav className="hidden md:block fixed top-0 left-0 right-0 z-50">
-        <div className="mx-auto max-w-5xl px-4 pt-3">
-          <div className="flex items-center justify-between h-10 px-4 rounded-full bg-card/70 backdrop-blur-xl border border-border/30 shadow-sm">
+        <div className="mx-auto max-w-7xl px-2 pt-3">
+          <div className="flex items-center justify-between h-10 px-3 rounded-full bg-card/70 backdrop-blur-xl border border-border/30 shadow-sm">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 text-foreground">
+            <Link href="/" className="flex items-center gap-2 text-foreground shrink-0">
               <span className="font-semibold text-sm">A.</span>
             </Link>
 
             {/* Desktop Nav */}
-            <div className="flex items-center gap-0.5">
+            <div className="flex items-center gap-0 flex-1 justify-center">
               {links.map((link) => {
                 const Icon = link.icon
                 const isActive = pathname.split("/").some(part => part === link.href.replace("/", ""))
@@ -43,21 +43,21 @@ export function Navbar() {
                     key={link.href}
                     href={link.href}
                     className={cn(
-                      "px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 flex items-center gap-1.5",
+                      "px-2.5 py-1 rounded-full text-xs font-medium transition-all duration-200 flex items-center gap-1 whitespace-nowrap",
                       isActive
                         ? "bg-foreground text-background"
                         : "text-muted-foreground hover:text-foreground",
                     )}
                   >
-                    <Icon className="h-4 w-4" />
-                    {link.label}
+                    <Icon className="h-3.5 w-3.5" />
+                    <span className="hidden lg:inline">{link.label}</span>
                   </Link>
                 )
               })}
             </div>
 
             {/* Controls */}
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-0.5 shrink-0">
               <LocaleToggle />
               <ThemeToggle />
             </div>
@@ -67,7 +67,7 @@ export function Navbar() {
 
       {/* Mobile Bottom Navigation */}
       <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-t border-border/50">
-        <div className="flex items-center justify-around px-4 py-3">
+        <div className="flex items-center justify-around px-2 py-2">
           {links.map((link) => {
             const Icon = link.icon
             const isActive = pathname.split("/").some(part => part === link.href.replace("/", ""))
@@ -77,21 +77,21 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "flex flex-col items-center gap-1.5 px-4 py-2 rounded-xl transition-all duration-200",
+                  "flex flex-col items-center gap-0.5 px-2 py-1 rounded-lg transition-all duration-200",
                   isActive
                     ? "text-foreground"
                     : "text-muted-foreground hover:text-foreground",
                 )}
               >
-                <Icon className="h-6 w-6" />
-                <span className="text-xs font-medium">{link.label}</span>
+                <Icon className="h-5 w-5" />
+                <span className="text-[10px] font-medium leading-tight">{link.label}</span>
               </Link>
             )
           })}
           
           {/* Controls */}
-          <div className="flex flex-col items-center gap-2 px-2">
-            <div className="flex items-center gap-1.5">
+          <div className="flex flex-col items-center gap-1 px-1">
+            <div className="flex items-center gap-0.5">
               <LocaleToggle />
               <ThemeToggle />
             </div>
@@ -100,7 +100,7 @@ export function Navbar() {
       </nav>
 
       {/* Spacer for mobile */}
-      <div className="md:hidden h-20" />
+      <div className="md:hidden h-16" />
     </>
   )
 }

@@ -103,6 +103,23 @@ export function ProfileSidebar({ profile }: ProfileSidebarProps) {
         </div>
       </motion.div>
 
+      {/* Download CV Button */}
+      <motion.a
+        href="/cv.pdf"
+        download
+        className="w-full px-6 py-3 bg-purple-700 hover:bg-purple-600 text-white font-semibold rounded-lg transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-purple-700/50"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.9 }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+        </svg>
+        Télécharger CV
+      </motion.a>
+
     </div>
   )
 }
