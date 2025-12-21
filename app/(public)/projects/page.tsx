@@ -36,13 +36,7 @@ export default function ProjectsPage() {
     ? projects 
     : projects.filter(p => p.category === selectedCategory)
 
-  const stats = [
-    { number: "100+", label: locale === "fr" ? "Projets réalisés" : "Completed Projects", color: "text-purple-700" },
-    { number: "50+", label: locale === "fr" ? "Clients satisfaits" : "Happy Clients", color: "text-primary" },
-    { number: "8", label: locale === "fr" ? "Années d'expérience" : "Years of Experience", color: "text-purple-700" },
-    { number: "98%", label: locale === "fr" ? "Taux de satisfaction" : "Satisfaction Rate", color: "text-foreground" }
-  ]
-
+  
   return (
     <div className="w-full max-w-6xl mx-auto space-y-8">
       {/* Header */}
@@ -56,19 +50,6 @@ export default function ProjectsPage() {
             : "A selection of web and mobile projects I've designed and developed. From concept to production, discover innovative and high-performance digital solutions."
           }
         </p>
-      </div>
-
-      {/* Stats */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        {stats.map((stat, idx) => (
-          <div
-            key={idx}
-            className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-xl p-6 text-center hover:border-purple-700 hover:shadow-lg hover:shadow-purple-700/10 transition-all"
-          >
-            <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.number}</div>
-            <div className="text-sm text-muted-foreground">{stat.label}</div>
-          </div>
-        ))}
       </div>
 
       {/* Filters */}
@@ -118,7 +99,7 @@ export default function ProjectsPage() {
               </div>
 
               {/* Links overlay */}
-              <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity md:bottom-3 md:right-3">
                 {project.githubUrl && (
                   <a
                     href={project.githubUrl}
@@ -184,6 +165,32 @@ export default function ProjectsPage() {
                   </div>
                 </div>
               )}
+
+              {/* Links pour mobile */}
+              <div className="flex gap-2 lg:hidden">
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 px-4 py-2 rounded-lg bg-black/5 dark:bg-white/10 text-foreground hover:bg-black/10 dark:hover:bg-white/20 transition-colors border border-border flex items-center justify-center gap-2 font-medium text-sm"
+                  >
+                    <GithubIcon className="w-4 h-4" />
+                    <span>{locale === "fr" ? "Code" : "Code"}</span>
+                  </a>
+                )}
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 px-4 py-2 rounded-lg bg-purple-700 text-white hover:bg-purple-600 transition-colors border border-purple-600 flex items-center justify-center gap-2 font-medium text-sm"
+                  >
+                    <ExternalLinkIcon className="w-4 h-4" />
+                    <span>{locale === "fr" ? "Voir" : "View"}</span>
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         ))}
@@ -201,7 +208,6 @@ export default function ProjectsPage() {
 
       {/* CTA */}
       <div className="bg-card/80 backdrop-blur-sm border-2 border-purple-700/20 rounded-xl p-8 text-center space-y-4">
-        <SparklesIcon className="w-12 h-12 text-purple-700 mx-auto" />
         <h2 className="text-2xl font-bold text-foreground">
           {locale === "fr" 
             ? "Un projet en tête ?" 
